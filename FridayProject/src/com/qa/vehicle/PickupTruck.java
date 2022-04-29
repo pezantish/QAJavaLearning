@@ -3,15 +3,17 @@ package com.qa.vehicle;
 public class PickupTruck extends Vehicle{
 	int[] bedDimensions = new int[2];
 	
-	public PickupTruck(double weight, int heightCM, int numberOfWheels, String make, String model,
+	//CONSTRUCTOR
+	public PickupTruck(int customerID, String reg, String make, String model, double weight, int height, double price,
 			int[] bedDimensions) {
-		super(weight, heightCM, numberOfWheels, make, model);
+		super(customerID, reg, make, model, weight, height, price);
 		this.bedDimensions = bedDimensions;
 	}
 
 	@Override
+	//DIFFERENT CALCULATION DEPENDING ON WHICH CLASS IS CALLED
 	public double calcBill() {
-		return 90.7;
+		return price + 3;
 	}
 	
 

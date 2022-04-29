@@ -2,17 +2,18 @@ package com.qa.vehicle;
 
 public class Motorbike extends Vehicle{
 	int cc;
-	
-	public Motorbike(double weight, int heightCM, int numberOfWheels, String make, String model, int cc) {
-		super(weight, heightCM, numberOfWheels, make, model);
+
+	//CONSTRUCTOR
+	public Motorbike(int customerID, String reg, String make, String model, double weight, int height, double price,
+			int cc) {
+		super(customerID, reg, make, model, weight, height, price);
 		this.cc = cc;
 	}
 
-
-
 	@Override
+	//DIFFERENT CALCULATION DEPENDING ON WHICH CLASS IS CALLED
 	public double calcBill() {
-		return 87.6;
+		return price + 5;
 	}
 
 }

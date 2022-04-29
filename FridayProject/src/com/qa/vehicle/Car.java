@@ -4,16 +4,18 @@ public class Car extends Vehicle{
 	boolean hasSunroof;
 	int bootSize;
 	
-	public Car(double weight, int heightCM, int numberOfWheels, String make, String model, boolean hasSunroof,
-			int bootSize) {
-		super(weight, heightCM, numberOfWheels, make, model);
+	//CONSTRUCTOR
+	public Car(int customerID, String reg, String make, String model, double weight, int height, double price,
+			boolean hasSunroof, int bootSize) {
+		super(customerID, reg, make, model, weight, height, price);
 		this.hasSunroof = hasSunroof;
 		this.bootSize = bootSize;
 	}
 
 	@Override
+	//DIFFERENT CALCULATION DEPENDING ON WHICH CLASS IS CALLED
 	public double calcBill() {
-		return 35.3;
+		return price + 75;
 	}
 
 	
